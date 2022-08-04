@@ -63,8 +63,9 @@ body{
 }
 
 .container{
-    width: 67%;
+    max-width: 1320px;
     margin: 0 auto;
+    padding: 0 15px;
     
 }
 
@@ -72,8 +73,8 @@ body{
 .header{
     background-color:#AA0601;
     height: 80px; 
-    display: flex;
-    align-items: center;    
+    padding: 15px;
+    
 }
 .wrap{
     display: flex;
@@ -83,16 +84,16 @@ body{
 .logo img{
     width: 80px;
 }
-.nav{
-    width: 47%;   
-}
+
 .nav ul{
     display: flex;
-    justify-content: space-between;
-}
-.nav li{
+    justify-content:flex-end;
     
 }
+.nav li{
+    margin-left: 64px;
+}
+
 a{
     text-decoration: none;
     color: #FFFFFF;
@@ -101,10 +102,11 @@ a{
 .nav a{
     font-size: 20px;
     line-height: 30px;
-    transition: all 0.3s;
+    transition: all 0.3s ;
+    
 }
-.nav a:hover{
-    font-size: 1.5rem;
+.header a:hover,.footer a:hover{
+    opacity: 0.7;
 }
 
 
@@ -179,11 +181,18 @@ h4{
 .contact img{    
     width: 36px;
 }
-.contact p{    
+.contact li{    
     font-size: 36px;
     line-height: 54px;
     color:white;    
 }
+.contact span{
+    font-size: 36px;
+    line-height: 54px;
+    vertical-align:bottom;
+    margin-right: 1rem;    
+}
+
 .copy{
     display: flex;
     justify-content: space-between;
@@ -207,15 +216,13 @@ h4{
 }
 
 
+
 /* RWD */
 @media(max-width:992px){
     .container{
-        width: 100%;
-        padding: 0 36px;       
-    }
-    .nav{
-        width:70%;
-    }    
+        max-width: 720px;
+        
+    }       
     .bar{
         width: 65%;
     }
@@ -223,24 +230,22 @@ h4{
         margin-left: 1rem;
     }
     .main{
-        margin: 80px 0;
+        margin: 80px auto;
     }
 }
 
 @media(max-width:767px){
     .container{
-        padding: 0 1rem;
+        max-width:100%;
     }
     .header{
         height: 176px;
         align-items: normal;
+        padding: 0;
     }
-    .wrap{
+    .wrap{       
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 0;  
-        
-        
+        padding: 0;       
     }
     
     .logo{
@@ -250,24 +255,18 @@ h4{
         justify-content: center;
         align-items: center; 
         border-bottom: 1px solid #FFFFFF;    
-       
     }
-    .nav{        
-        width: 100%;
-        
-              
+    .nav{
+        width:100%;
     }
     .nav ul{      
-        flex-wrap: wrap;  
-        
+        flex-wrap: wrap;         
     }
     .nav li{
+        margin: 0;
         width: 50%;
-        border-bottom: 1px solid #FFFFFF;
-        border-right: 1px solid #FFFFFF;
+        border: 1px solid #FFFFFF;
         height: 48px;
-        
-        
     }
     .nav a{
         display: block;
@@ -278,6 +277,10 @@ h4{
         align-items: center;
         font-size: 16px;
         line-height: 24px;
+    }
+    .nav a:hover{
+        background-color:#691610 ;
+        opacity: 1;
     }
     .footer-nav{
         padding: 0;
@@ -301,15 +304,20 @@ h4{
         padding: 24px 0;
         border-bottom: none;
         display: flex;
-        align-items: center;
-        
+        align-items: center;        
     }
-    .contact p{
+    .contact li{
+       line-height: 24px;
+    }
+    .contact a{
         font-size: 16px;
         line-height: 24px;
     }
-    .contact img{
-        width: 20px;
+    .contact span{
+        font-size: 20px;
+        line-height: 24px;
+        margin-right: 10px;
+        vertical-align:middle;
     }
     .copy{
         flex-direction: column;
